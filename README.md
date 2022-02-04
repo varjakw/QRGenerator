@@ -8,6 +8,5 @@ Just a small Friday-afternoon Python coding challenge
  
 ```pip install qrcode[pil]```
 
-```pip install opencv-python```
 
 
