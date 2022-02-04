@@ -1,4 +1,4 @@
 # QRGenerator
-<img src="https://github.com/varjakw/varjakw/blob/main/QRGenerator.jpg" width="960" height="270" />
+<img src="https://github.com/varjakw/varjakw/blob/main/QRGenerator.jpg"/>
 
 Just a small Friday-afternoon coding challenge
