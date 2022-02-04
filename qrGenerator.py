@@ -34,10 +34,7 @@ class app:
         self.uppertext1.pack()
         self.create_btn = tk.Button(self.frame1, text="Create QR Code", font=def_font, command=self.create)
         self.create_btn.pack()
-        def_font = font.Font(family='MS Sans Serif')
-        self.decode_btn = tk.Button(self.frame1, text="Decode QR Code", font=def_font,
-                                      command=self.decode)
-        self.decode_btn.pack()
+
 
     def create(self):
         for i in self.master.winfo_children():
@@ -57,21 +54,6 @@ class app:
         self.createQR_btn.pack()
 
         self.menu_btn = tk.Button(self.frame2, text="Main Menu", font=def_font, command=self.menu)
-        self.menu_btn.pack()
-
-    def decode(self):
-        for i in self.master.winfo_children():
-            i.destroy()
-        self.frame3 = tk.Frame(self.master, width=300, height=300)
-        self.frame3.pack()
-        def_font = font.Font(family='MS Sans Serif')
-        self.uppertext2 = tk.Label(self.frame3, text="Decode QR", font=def_font)
-        self.uppertext2.pack()
-        self.menu_btn = tk.Button(self.frame3, text="Main Menu", font=def_font, command=self.menu)
-
-
-        self.decodeQR_btn = tk.Button(self.frame3, text="Decode QR", font=def_font, command=self.printstuff)
-        self.decodeQR_btn.pack()
         self.menu_btn.pack()
 
 
