@@ -1,3 +1,4 @@
+import sys
 import tkinter as tk
 from tkinter import ttk, font
 
@@ -81,13 +82,21 @@ class app:
 
 
     def generateqr(self, messagetext):
+        logo_display = Image.open('profile.jpg')
+        logo_display.thumbnail((60, 60))
+
         qr.add_data(messagetext)
         qr.make(fit=True)
-        img = qr.make_image(fill_color="black", back_color="white").convert('RGB')
-        img.save("sample.png")
-        image = Image.open('sample.png')
-        image.show()
 
+        qrImage = qr.make_image(fill_color="black", back_color="white").convert('RGB')
+
+        logo_pos = ((qrImage.size[0] - logo_display.size[0]) // 2, (qrImage.size[1] - logo_display.size[1]) // 2)
+        qrImage.paste(logo_display, logo_pos)
+
+        qrImage.save("qrCode.png")
+        image = Image.open('qrCode.png')
+        image.show()
+        sys.exit()
 
 
 
